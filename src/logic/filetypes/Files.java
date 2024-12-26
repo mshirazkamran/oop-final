@@ -13,7 +13,7 @@ public class Files {
 
         this.filepath = filepath;
 
-        if (filepath.contains("ppt")) {
+        if (filepath.contains("ppt") || filepath.contains("pptx")) {
             command = "start powerpnt ";
         } else if (filepath.contains("pdf")) {
             command = "start chrome ";

@@ -44,43 +44,52 @@ public class GUIbuilder {
                 Subject chosenSub = subs.get(indexes.get(clickedSubject));
                 int maxLectures = chosenSub.getFiles().size();
                 
-                // Set up the range for the combo boxes
-                int lowerBound = 0;
-                int upperBound = maxLectures - 1;
+                // more lectures so we need to open files that only user sepcifies
+                if (!(maxLectures < 8)) {
 
-                // Create the combo boxes for user input
-                JComboBox<Integer> comboBox1 = new JComboBox<>();
-                JComboBox<Integer> comboBox2 = new JComboBox<>();
+                    // Set up the range for the combo boxes
+                    int lowerBound = 1;
+                    int upperBound = maxLectures;
 
-                for (int i = lowerBound; i <= upperBound; i++) {
-                    comboBox1.addItem(i);
-                    comboBox2.addItem(i);
+                    // Create the combo boxes for user input
+                    JComboBox<Integer> comboBox1 = new JComboBox<>();
+                    JComboBox<Integer> comboBox2 = new JComboBox<>();
+                    
+
+                    for (int i = lowerBound; i <= upperBound; i++) {
+                        comboBox1.addItem(i);
+                        comboBox2.addItem(i);
+                    }
+
+                    // Create a JPanel to hold the combo boxes and the OK button
+                    JPanel panel = new JPanel();
+                    panel.add(new JLabel("Select number of files you want to read: "));
+                    panel.add(comboBox1);
+                    panel.add(comboBox2);
+
+                    JButton okButton = new JButton("Confirm");
+
+                    okButton.addActionListener((ActionEvent ae) -> {
+                        // get the selected numbers and open the files
+                        int selectedNumber1 = (Integer) comboBox1.getSelectedItem();
+                        int selectedNumber2 = (Integer) comboBox2.getSelectedItem();
+                        chosenSub.openFilesInRange(selectedNumber1, selectedNumber2);
+                    });
+
+                    panel.add(okButton);
+
+                    // Create a JDialog to show the combo boxes and the OK button
+                    JDialog dialog = new JDialog(frame, "Choose Two Numbers", true);
+                    dialog.setLayout(new BorderLayout());
+                    dialog.add(panel, BorderLayout.CENTER);
+                    dialog.setSize(400, 150);
+                    dialog.setLocationRelativeTo(frame); // Center the dialog
+                    dialog.setVisible(true);  // Show the dialog
+
+                } else {
+                    //lesss files so we need open all files
+                    chosenSub.openAllFiles();
                 }
-
-                // Create a JPanel to hold the combo boxes and the OK button
-                JPanel panel = new JPanel();
-                panel.add(new JLabel("Select files you want to read: "));
-                panel.add(comboBox1);
-                panel.add(comboBox2);
-
-                JButton okButton = new JButton("Confirm");
-                okButton.addActionListener((ActionEvent ae) -> {
-                    int selectedNumber1 = (Integer) comboBox1.getSelectedItem();
-                    int selectedNumber2 = (Integer) comboBox2.getSelectedItem();
-                    JOptionPane.showMessageDialog(frame, 
-                        "You selected: " + selectedNumber1 + " and " + selectedNumber2);
-                    chosenSub.openFilesInRange(selectedNumber1, selectedNumber2);
-                });
-
-                panel.add(okButton);
-
-                // Create a JDialog to show the combo boxes and the OK button
-                JDialog dialog = new JDialog(frame, "Choose Two Numbers", true);
-                dialog.setLayout(new BorderLayout());
-                dialog.add(panel, BorderLayout.CENTER);
-                dialog.setSize(400, 150);
-                dialog.setLocationRelativeTo(frame); // Center the dialog
-                dialog.setVisible(true);  // Show the dialog
             });
 
             frame.add(button);

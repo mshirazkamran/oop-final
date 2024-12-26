@@ -25,13 +25,13 @@ public class PopulateLists {
 
         subjectName = subjectName.toUpperCase();
         List<Files> list = new ArrayList<Files>();
-        String filepath = map.getOrDefault(subjectName, "./src/textfiles/OOPlocations.txt");
+        String filepath = map.get(subjectName);
 
 
         //file exists
-        System.out.println(filepath);
-        File file = new File(filepath);
-        System.out.println(file.exists());
+        // System.out.println(filepath);
+        // File file = new File(filepath);
+        // System.out.println(file.exists());
 
 
         try {

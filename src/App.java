@@ -1,3 +1,5 @@
+import javax.swing.SwingUtilities;
+
 import Utils.CommandBuilder;
 import logic.Student;
 import logic.subjects.*;
@@ -13,6 +15,9 @@ public class App {
     //    Subject sub = new Subject("SEC");
     //    sub.openFilesInRange(3,7);
 
-    GUIbuilder.buildGUI(new Student("shiraz"));
+        SwingUtilities.invokeLater( () -> {
+            GUIbuilder.buildGUI(new Student("shiraz"));
+        });
+        // GUIbuilder.buildGUI(new Student("shiraz"));
     }
 }

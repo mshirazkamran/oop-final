@@ -33,7 +33,7 @@ public class Subject {
 
     public void openFilesInRange(int start, int end) {
         for (int i = start; i <= end; i++) {
-            String command = files.get(i-1).getCommand() + files.get(i-1).getFilepath();
+            String command = files.get(i).getCommand() + files.get(i-1).getFilepath();
             CommandBuilder.runCommand(command);
         }
     }
