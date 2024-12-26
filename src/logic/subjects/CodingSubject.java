@@ -11,6 +11,18 @@ public class CodingSubject extends Subject implements Codeable {
     }
 
     @Override
+    public void openAllFiles() {
+        super.openAllFiles();
+        openCodeEditor();
+    }
+
+    @Override
+    public void openFilesInRange(int start, int end) {
+        super.openFilesInRange(start, end);
+        openCodeEditor();
+    }
+
+    @Override
     public void openCodeEditor() {
         CommandBuilder.runCommand(Codeable.command);
     }

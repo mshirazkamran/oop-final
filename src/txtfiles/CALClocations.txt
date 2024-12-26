@@ -1,5 +1,5 @@
-G:\\IMP-FILES\\Semester-3\\Calculus-and-Analytical-Geometry\\trig-derivation-formulas.pdf
-G:\\IMP-FILES\\Semester-3\\Calculus-and-Analytical-Geometry\\Derivatives-rules.pdf
-G:\\IMP-FILES\\Semester-3\\Calculus-and-Analytical-Geometry\\Derivatives-Formula-Sheet.pdf
-G:\\IMP-FILES\\Semester-3\\Calculus-and-Analytical-Geometry\\calculus-solution-manual.pdf
-G:\\IMP-FILES\\Semester-3\\Calculus-and-Analytical-Geometry\\anton-book.pdf
+files\\Calculus-and-analytical-geometry\\trig-derivation-formulas.pdf  
+files\\Calculus-and-analytical-geometry\\Derivatives-rules.pdf  
+files\\Calculus-and-analytical-geometry\\Derivatives-Formula-Sheet.pdf  
+files\\Calculus-and-analytical-geometry\\calculus-solution-manual.pdf  
+files\\Calculus-and-analytical-geometry\\anton-book.pdf  

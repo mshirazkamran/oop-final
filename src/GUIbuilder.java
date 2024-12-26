@@ -4,7 +4,6 @@ import logic.subjects.Subject;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.util.ArrayList;
 import java.util.Map;
 
 public class GUIbuilder {
@@ -16,7 +15,6 @@ public class GUIbuilder {
         "CALC",3,
         "PK", 4,
         "SEC", 5
-        
     );
 
     public static void buildGUI(Student student) {
