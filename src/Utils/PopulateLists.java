@@ -12,12 +12,12 @@ import logic.filetypes.Files;
 public class PopulateLists {
 
     private static final Map<String,String> map = Map.of(
-        "OOP", "./src/txtfiles/OOPlocations.txt",
-        "DSA", "./src/txtfiles/DSAlocations.txt",
-        "IE", "./src/txtfiles/IElocations.txt",
-        "PK", "./src/txtfiles/PKlocations.txt",
-        "SEC", "./src/txtfiles/SEClocations.txt",
-        "CALC", "./src/txtfiles/CALClocations.txt"
+        "OOP", "txtfiles/OOPlocations.txt",
+        "DSA", "txtfiles/DSAlocations.txt",
+        "IE", "txtfiles/IElocations.txt",
+        "PK", "txtfiles/PKlocations.txt",
+        "SEC", "txtfiles/SEClocations.txt",
+        "CALC", "txtfiles/CALClocations.txt"
     );
     
     public static List<Files> readFiles(String subjectName) {
@@ -25,6 +25,7 @@ public class PopulateLists {
         subjectName = subjectName.toUpperCase();
         List<Files> list = new ArrayList<Files>();
         String filepath = map.get(subjectName);
+        System.out.println(filepath.repeat(4));
 
 
         //file exists
