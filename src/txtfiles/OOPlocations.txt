@@ -1,3 +1,4 @@
 G:\\IMP-FILES\\Semester-3\\OOP\\pptx\\83-Inheritance-Reference-vs-Object-vs-Instance-vs-Class.pptx
 G:\\IMP-FILES\\Semester-3\\OOP\\pptx\\84-Inheritance-Static-vs-Instance-Variables.pptx
 G:\\IMP-FILES\\Semester-3\\OOP\\pptx\\85-Inheritance-Static-vs-Instance-Methods.pptx
+G:\\IMP-FILES\\Semester-3\\OOP\\pptx\\Generics-in-Java.pdf

@@ -1,5 +1,6 @@
 import javax.swing.*;
 import logic.Student;
+import logic.subjects.CodingSubject;
 import logic.subjects.Subject;
 
 import java.awt.*;
@@ -18,6 +19,8 @@ public class GUIbuilder {
         "SEC", 5
         
     );
+
+    private static Subject chosenSub;
 
     public static void buildGUI(Student student) {
         JFrame frame = new JFrame("GUI with Buttons");
@@ -41,7 +44,9 @@ public class GUIbuilder {
 
                 // Get the max lectures for the clicked subject
                 var subs = student.getSubjects();
-                Subject chosenSub = subs.get(indexes.get(clickedSubject));
+                GUIbuilder.chosenSub = subs.get(indexes.get(clickedSubject));
+                chosenSub = chosenSub instanceof CodingSubject ? (CodingSubject) chosenSub : chosenSub;
+                System.out.println(chosenSub.getClass());
                 int maxLectures = chosenSub.getFiles().size();
                 
                 // more lectures so we need to open files that only user sepcifies

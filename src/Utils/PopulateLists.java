@@ -36,7 +36,6 @@ public class PopulateLists {
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filepath));
-            System.out.println(reader.markSupported());
             String line;
             while ((line = reader.readLine()) != null) {
                 list.add(new Files(line));

@@ -13,11 +13,11 @@ public class Files {
 
         this.filepath = filepath;
 
-        if (filepath.contains("ppt") || filepath.contains("pptx")) {
+        if (filepath.endsWith("ppt") || filepath.endsWith("pptx")) {
             command = "start powerpnt ";
-        } else if (filepath.contains("pdf")) {
+        } else if (filepath.endsWith("pdf")) {
             command = "start chrome ";
-        } else if (filepath.contains("word")) {
+        } else if (filepath.endsWith("word")) {
             command = "start winword ";  
         }
     }
