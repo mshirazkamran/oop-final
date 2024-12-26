@@ -1,5 +1,5 @@
-G:\\IMP-FILES\\Semester-3\\DSA\\lectures\\dsa-normal-assign01-little.pdf
-G:\\IMP-FILES\\Semester-3\\DSA\\lectures\\fa23-bse-077(thoery2).pdf
-G:\\IMP-FILES\\Semester-3\\DSA\\lectures\\FA23-MidTerm.pdf
-G:\\IMP-FILES\\Semester-3\\DSA\\lectures\\FA23-Terminal.pdf
-G:\\IMP-FILES\\Semester-3\\DSA\\lectures\\LabManual-Ch1-3.pdf
+files\\DSA\\dsa-normal-assign01-little.pdf  
+files\\DSA\\fa23-bse-077(thoery2).pdf  
+files\\DSA\\FA23-MidTerm.pdf  
+files\\DSA\\FA23-Terminal.pdf  
+files\\DSA\\LabManual-Ch1-3.pdf  
