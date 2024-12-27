@@ -24,7 +24,6 @@ public class Subject {
         return PopulateLists.readFiles(this.getName());
     }
 
-
     public void openAllFiles() {
         for (Files file : files) {
             CommandBuilder.runCommand(file.getCommand() + file.getFilepath());
@@ -33,7 +32,8 @@ public class Subject {
 
     public void openFilesInRange(int start, int end) {
         for (int i = start; i <= end; i++) {
-            String command = files.get(i-1).getCommand() + files.get(i-1).getFilepath();
+            // typical command looks like this "start winword file/filename.word"
+            String command = files.get(i - 1).getCommand() + files.get(i - 1).getFilepath();
             CommandBuilder.runCommand(command);
         }
     }
@@ -41,7 +41,4 @@ public class Subject {
     public String getName() {
         return name;
     }
-
-    
-
 }

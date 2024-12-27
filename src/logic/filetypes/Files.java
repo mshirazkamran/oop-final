@@ -1,7 +1,5 @@
 package logic.filetypes;
 
-import java.util.Arrays;
-import java.util.List;
 
 
 public class Files {
