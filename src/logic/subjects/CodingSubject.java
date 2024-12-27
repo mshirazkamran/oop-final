@@ -17,7 +17,7 @@ public class CodingSubject extends Subject implements Codeable {
     }
 
     @Override
-    public void openFilesInRange(int start, int end) {
+    public void openFilesInRange(int start, int end) throws InvalidInputException {
         super.openFilesInRange(start, end);
         System.out.println("opened all files now openeing code");
         openCodeEditor();

@@ -4,6 +4,7 @@ import org.w3c.dom.events.MouseEvent;
 
 import logic.Student;
 import logic.subjects.CodingSubject;
+import logic.subjects.InvalidInputException;
 import logic.subjects.Subject;
 
 import java.awt.*;
@@ -102,7 +103,13 @@ public class GUIbuilder {
                                 int selectedNumber1 = (Integer) comboBox1.getSelectedItem();
                                 int selectedNumber2 = (Integer) comboBox2.getSelectedItem();
 
-                                chosenSubject.openFilesInRange(selectedNumber1, selectedNumber2);
+                                // custom exception thrown here. note that the method
+                                // openFilesInRange(int, int) throws it
+                                try {
+                                    chosenSubject.openFilesInRange(selectedNumber1, selectedNumber2);
+                                } catch (InvalidInputException e1) {
+                                    e1.getLocalizedMessage();
+                                }
                             }
                         });
 

@@ -30,7 +30,11 @@ public class Subject {
         }
     }
 
-    public void openFilesInRange(int start, int end) {
+    public void openFilesInRange(int start, int end) throws InvalidInputException {
+
+        if (start > end) {
+            throw new InvalidInputException("Cannot open files if start is smaller than end!");
+        }
         for (int i = start; i <= end; i++) {
             // typical command looks like this "start winword file/filename.word"
             String command = files.get(i - 1).getCommand() + files.get(i - 1).getFilepath();
