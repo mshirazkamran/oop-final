@@ -1,16 +1,12 @@
 import javax.swing.*;
 
-import org.w3c.dom.events.MouseEvent;
-
 import logic.Student;
-import logic.subjects.CodingSubject;
 import logic.subjects.InvalidInputException;
 import logic.subjects.Subject;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -59,7 +55,7 @@ public class GUIbuilder {
                     System.out.println(clickedSubject);
 
                     // Get the max lectures for the clicked subject
-                    ArrayList<Subject> subs = (ArrayList<Subject>) student.getSubjects();
+                    ArrayList<Subject> subs = student.getSubjects();
                     final Subject chosenSubject = subs.get(indexes.get(clickedSubject));
 
                     // prints subject or coding subject to the terminal

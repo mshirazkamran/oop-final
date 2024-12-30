@@ -16,9 +16,9 @@ public class CommandBuilder {
             Process process = processBuilder.start();
 
             // Wait for the process to complete
-            process.waitFor();
+            // process.waitFor();
 
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             System.err.println("Error while executing command: " + e.getMessage());
         }
     }
