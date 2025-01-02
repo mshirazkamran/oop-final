@@ -27,7 +27,4 @@ public class Files {
     public String getFilepath() {
         return filepath;
     }
-
-    
-
 }

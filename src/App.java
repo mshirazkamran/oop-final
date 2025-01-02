@@ -1,8 +1,4 @@
-import javax.swing.SwingUtilities;
-
-import Utils.CommandBuilder;
 import logic.Student;
-import logic.subjects.*;
 
 public class App {
     public static void main(String[] args) throws Exception {

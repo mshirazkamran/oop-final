@@ -19,13 +19,12 @@ public class GUIbuilder {
         "CALC",3,
         "PK", 4,
         "SEC", 5
-        
     );
 
 
     public static void buildGUI(Student student) {
 
-        JFrame frame = new JFrame("GUI with Buttons");
+        JFrame frame = new JFrame("Prep for papers");
         frame.setSize(400, 280); 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setName(student.getName());
